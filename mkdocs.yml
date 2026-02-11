@@ -1,4 +1,4 @@
-site_name: 个人技术博客
+site_name: 透明的心
 site_description: 基于 Markdown 的个人技术博客（GitHub Pages）
 site_author: wq0713
 site_url: https://wq0713.github.io/
@@ -7,6 +7,8 @@ theme:
   name: material
   language: zh
   custom_dir: overrides
+  logo: assets/logo.ico
+  favicon: assets/favicon.ico
   palette:
     - scheme: slate
       primary: blue grey
@@ -41,3 +43,6 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
