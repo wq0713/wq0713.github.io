@@ -10,3 +10,34 @@
 .md-sidebar {
   border-right: 1px solid rgba(255, 255, 255, 0.06);
 }
+
+.md-tabs {
+  background: transparent;
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  left: 14rem;
+  right: 18rem;
+  z-index: 5;
+  height: var(--md-header-height);
+  display: flex;
+  align-items: center;
+}
+
+.md-tabs__inner {
+  padding: 0;
+}
+
+.md-tabs__link {
+  opacity: 0.95;
+}
+
+.md-tabs__link--active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 60em) {
+  .md-tabs {
+    display: none;
+  }
+}
