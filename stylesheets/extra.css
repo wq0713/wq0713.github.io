@@ -2,6 +2,7 @@
   --md-default-bg-color: #111214;
   --md-code-bg-color: #1b1d20;
   --wsn-nav-icon-color: rgba(255, 255, 255, 0.68);
+  --wsn-tree-line-color: rgba(255, 255, 255, 0.08);
 }
 
 .md-header {
@@ -78,8 +79,25 @@
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2.5L19.5 10H14V4.5z'/%3E%3C/svg%3E");
 }
 
-@media screen and (min-width: 60em) {
-  .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list {
-    display: none;
-  }
+.md-sidebar--primary .md-nav__list .md-nav__list {
+  border-left: 1px solid var(--wsn-tree-line-color);
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.md-sidebar--primary .md-nav__item {
+  position: relative;
+}
+
+.md-sidebar--primary .md-nav__item > .md-nav__link::after {
+  content: "";
+  position: absolute;
+  left: -0.75rem;
+  top: 1.15rem;
+  width: 0.75rem;
+  border-top: 1px solid var(--wsn-tree-line-color);
+}
+
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link::after {
+  display: none;
 }
