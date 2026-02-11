@@ -1,0 +1,12 @@
+:root {
+  --md-default-bg-color: #111214;
+  --md-code-bg-color: #1b1d20;
+}
+
+.md-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.md-sidebar {
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}

@@ -1,0 +1,45 @@
+site_name: 个人技术博客
+site_description: 基于 Markdown 的个人技术博客（GitHub Pages）
+site_author: wq0713
+site_url: https://wq0713.github.io/
+
+repo_name: wq0713/wq0713.github.io
+repo_url: https://github.com/wq0713/wq0713.github.io
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: slate
+      primary: blue grey
+      accent: cyan
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
