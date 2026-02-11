@@ -20,7 +20,7 @@ theme:
     - navigation.expand
     - navigation.top
     - navigation.indexes
-    - toc.integrate
+    - toc.follow
     - search.suggest
     - search.highlight
 
