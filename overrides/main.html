@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% set ns = namespace(tabs="") %}
+
+{% block tabs %}
+  {% set ns.tabs = super() %}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  {{ ns.tabs }}
+{% endblock %}
