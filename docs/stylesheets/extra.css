@@ -14,18 +14,20 @@
 .md-tabs {
   background: transparent;
   box-shadow: none;
-  position: fixed;
-  top: 0;
-  left: 14rem;
-  right: 18rem;
-  z-index: 5;
+}
+
+.md-header__inner .md-tabs {
+  flex: 1;
   height: var(--md-header-height);
   display: flex;
   align-items: center;
+  min-width: 0;
+  margin-left: 0.6rem;
 }
 
 .md-tabs__inner {
   padding: 0;
+  margin: 0;
 }
 
 .md-tabs__link {
@@ -34,6 +36,12 @@
 
 .md-tabs__link--active {
   opacity: 1;
+}
+
+.md-header__inner .md-tabs__list {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 60em) {
