@@ -3,12 +3,10 @@ site_description: 基于 Markdown 的个人技术博客（GitHub Pages）
 site_author: wq0713
 site_url: https://wq0713.github.io/
 
-repo_name: wq0713/wq0713.github.io
-repo_url: https://github.com/wq0713/wq0713.github.io
-
 theme:
   name: material
   language: zh
+  custom_dir: overrides
   palette:
     - scheme: slate
       primary: blue grey
