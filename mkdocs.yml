@@ -18,7 +18,6 @@ theme:
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
-    - navigation.indexes
     - toc.follow
     - search.suggest
     - search.highlight
