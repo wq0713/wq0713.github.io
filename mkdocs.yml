@@ -45,3 +45,6 @@ extra_css:
 
 extra_javascript:
   - javascripts/extra.js
+
+extra:
+  generator: false
