@@ -12,7 +12,7 @@
         <meta name="author" content="wq0713">
       
       
-        <link rel="canonical" href="https://wq0713.github.io/CAD%E6%93%8D%E4%BD%9C/%E9%9C%87%E9%9C%81%E5%A4%A7%E9%A5%AD%E5%BA%84/%E9%9C%81%E9%9C%81/">
+        <link rel="canonical" href="https://wq0713.github.io/CAD%E6%93%8D%E4%BD%9C/%E9%9C%87%E9%9C%81%E5%A4%A7%E9%A5%AD%E5%BA%84/%E6%AF%94%E8%BE%83%E4%B8%A4%E4%B8%AA%E6%9B%B2%E7%BA%BF%28Curve%29%E7%9A%84%E8%B7%9D%E7%A6%BB/">
       
       
         <link rel="prev" href="../../ZZQ/%E6%88%91%E7%9A%84AutoCAD%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/">
@@ -26,7 +26,7 @@
     
     
       
-        <title>霁霁 - 透明的心</title>
+        <title>比较两个曲线(Curve)的距离 - 透明的心</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              霁霁
+              比较两个曲线(Curve)的距离
             
           </span>
         </div>
@@ -584,7 +584,7 @@
           
   
   <span class="md-ellipsis">
-    霁霁
+    比较两个曲线(Curve)的距离
     
   </span>
   
@@ -596,7 +596,7 @@
         
   
   <span class="md-ellipsis">
-    霁霁
+    比较两个曲线(Curve)的距离
     
   </span>
   
@@ -630,6 +630,15 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       比较两个多段线的距离
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法
     </span>
   </a>
   
@@ -1043,6 +1052,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1064,15 +1082,15 @@
 
 
 
-  <h1>霁霁</h1>
+  <h1>比较两个曲线(Curve)的距离</h1>
 
 <h2 id="curve">比较两个曲线(Curve)的距离<a class="headerlink" href="#curve" title="Permanent link">&para;</a></h2>
 <h3 id="_1">比较两个多段线的距离<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>调用方法:
 Curve cur1 = entI as Curve;</p>
 <p>double jd = Math.Round(cur1.GetDistanceAtParameter(cur1.EndParam) / 100, 2);//这里计算一下,免得线太长计算太多也没必要</p>
-<p>Line ldis = GetMinLine(entI as Polyline, entJ as Polyline, jd);
-方法
+<p>Line ldis = GetMinLine(entI as Polyline, entJ as Polyline, jd);</p>
+<h3 id="_2">方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="w">   </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Line</span><span class="w"> </span><span class="nf">GetMinLine</span><span class="p">(</span><span class="n">Curve</span><span class="w"> </span><span class="n">curve1</span><span class="p">,</span><span class="w"> </span><span class="n">Curve</span><span class="w"> </span><span class="n">curve2</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">jd</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Curve</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lstCurves</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetCurves</span><span class="p">(</span><span class="n">curve1</span><span class="p">,</span><span class="w"> </span><span class="n">jd</span><span class="p">);</span>
@@ -1131,7 +1149,7 @@ Curve cur1 = entI as Curve;</p>
 <span class="n">dbObjColl</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
 <span class="k">return</span><span class="w"> </span><span class="n">lstCurves</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 
 
 
