@@ -6,7 +6,9 @@ Curve cur1 = entI as Curve;
 double jd = Math.Round(cur1.GetDistanceAtParameter(cur1.EndParam) / 100, 2);//这里计算一下,免得线太长计算太多也没必要
 
 Line ldis = GetMinLine(entI as Polyline, entJ as Polyline, jd);
-方法
+
+###方法
+
 ```csharp
    public static Line GetMinLine(Curve curve1, Curve curve2, double jd)
         {
